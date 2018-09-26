@@ -1,5 +1,4 @@
-var setTime;
-
+//Created elements are enclosed in a function to call them at a later time.
 function showModal() {
 // Modal "Wrapper"
 var modalBox = document.createElement('div');
@@ -89,10 +88,12 @@ submitButton.style.cursor = "pointer";
 modalBox.appendChild(submitButton);
 }
 
+// Calls showModal after 3 seconds (brings up the "popup").
 function start() {
   setTimeout(showModal, 3000);
 }
 
+// Runs start function upon load.
 window.addEventListener('load', start);
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -108,6 +109,7 @@ var clockseconds = document.getElementById('clockseconds');
 var clockwrapper = document.getElementById('clockwrapper');
 var centerwrapper = document.getElementById('centerwrapper');
 
+// Styling
 clockhours.style.color = "white";
 clockhours.style.textShadow = "-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black";
 clockminutes.style.color = "white";
@@ -165,6 +167,7 @@ function updateTimeAndColor() {
     var m = minutesTwoDigits();
     var s = secondsTwoDigits();
 
+    //concatenate the three into 1 six-digit string
     var timehex = h + m + s;
 
     clockhours.innerText = h;
