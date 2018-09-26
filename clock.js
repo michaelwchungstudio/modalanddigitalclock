@@ -1,3 +1,4 @@
+// Grab elements by ID
 var clockhours = document.getElementById('clockhours');
 var clockminutes = document.getElementById('clockminutes');
 var clockseconds = document.getElementById('clockseconds');
@@ -18,7 +19,7 @@ var currenthours = hoursTwoDigits();
 var currentminutes = minutesTwoDigits();
 var currentseconds = secondsTwoDigits();
 
-// Function that returns the current hour in two digits (if between 0 and 10)
+// Function that returns the current hour in two digits (if between 0 and 10) - also converts 24-hour to 12-hour clock
 function hoursTwoDigits() {
   var currentdateandtime = new Date();
   var h;
